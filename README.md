@@ -1,72 +1,60 @@
 # MovieFlix
 C++ implementation and performance analysis of Quicksort pivot selection strategies
-Each movie contains a unique movie ID and a rating. The program automatically generates a dataset of movies with random ratings and then sorts the dataset in descending order.
 
-How It Works
+The program generates a dataset of movies with unique IDs and random ratings, sorts the movies by rating in descending order, and compares the execution time of different QuickSort strategies.
 
-The program uses the QuickSort algorithm with Hoare's partitioning scheme.
+Features:
 
-Three different pivot selection strategies are implemented:
+1. Generates random movie datasets with ratings from 1.0 to 10.0
 
-First Pivot — uses the first element of the current partition as the pivot.
-Median-of-Three Pivot — selects the median value from the first, middle, and last elements.
-Random Pivot — randomly selects an element from the current partition.
+2. Sorts movies by rating in descending order
 
-The program measures the execution time of each strategy in microseconds, allowing their performance to be compared on the same dataset.
+3. Implements QuickSort using Hoare partitioning
 
-Features
-Generates random movie datasets
-Creates unique movie IDs
-Generates movie ratings between 1.0 and 10.0
-Sorts movies by rating in descending order
-Implements QuickSort manually
-Uses Hoare partitioning
-Supports three different pivot strategies
-Measures execution time using std::chrono
-Supports datasets of up to 1,000,000 movies
-Displays generated and sorted movie data
-Program Menu
+4. Compares three pivot selection strategies:
 
-The application provides the following options:
+5. First element pivot
 
-View Generated Data
-Displays the original randomly generated movie dataset.
-View Sorted Data
-Sorts the movies by rating using the median-of-three pivot strategy and displays the result.
-Compare Pivot Strategies
-Runs QuickSort using all three pivot strategies and displays their execution times.
-Exit
-Closes the program.
-Example
+6. Median-of-three pivot
 
-The program may display a comparison similar to:
+7. Random pivot
 
-Execution Results
+8. Measures execution time in microseconds
 
-Strategy            Time (us)
----------------------------------
-First Pivot         850
-Median Pivot        720
-Random Pivot        760
+9. Supports datasets of up to 1,000,000 movies
 
-Execution times will vary depending on the dataset and the computer running the program.
+10. Allows users to view both generated and sorted data
 
-Technologies Used
+
+How It Works:
+
+The program implements QuickSort manually rather than using the built-in sorting function.
+
+For each partition, one of three pivot strategies can be used. The same movie dataset can then be tested with each strategy to compare execution times.
+
+The program menu allows the user to:
+
+View the generated movie dataset
+
+View movies sorted by rating
+
+Compare QuickSort pivot strategies
+
+Exit the program
+
+
+Technologies:
+
 C++
-STL vector
-<algorithm>
-<random>
-<chrono>
-<iomanip>
-Compile and Run
 
-Using g++:
+STL Vector
 
-g++ main.cpp -o quicksort
-./quicksort
+Random number generation
 
-After starting the program, enter the number of movies you want to generate and select an option from the menu.
+Hoare partitioning
 
-Purpose
 
-The purpose of this project is to demonstrate how different pivot selection strategies can affect the performance of the QuickSort algorithm while applying the algorithm to a simple movie-rating dataset.
+
+Purpose:
+
+This project was created to explore the QuickSort algorithm and compare how different pivot selection techniques can influence sorting performance.
